@@ -1,0 +1,95 @@
+main
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 20px
+    padding: 40px
+    background-color: #242020
+
+img
+    width: 70vw
+    max-width: 700px
+    height: auto
+    border-radius: 10px
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2)
+
+.main-container
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 15px
+
+.profile-artist
+    display: flex
+    justify-content: space-around
+
+section
+    width: 90%
+    max-width: 800px
+    background: #424040
+    padding: 20px
+    border-radius: 10px
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+
+.color-div
+    display: flex
+    flex-direction: column
+    gap: 10px
+    align-items: center
+
+.palette
+    display: flex
+    gap: 8px
+
+.color
+    width: 40px
+    height: 40px
+    border-radius: 8px
+    cursor: pointer
+    transition: transform 0.2s ease, box-shadow 0.2s ease
+
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3)
+
+    &:active
+        transform: scale(0.95)
+
+.tooltip
+    position: fixed
+    background-color: rgba(0, 0, 0, 0.85)
+    color: white
+    padding: 6px 12px
+    border-radius: 6px
+    font-size: 14px
+    white-space: nowrap
+    pointer-events: none
+    transition: opacity 0.2s ease
+
+.tags-img
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 12px
+
+.tags
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 12px
+    color: black
+
+.tags p
+    background-color: #bdb1b1
+    padding: 8px 12px
+    border-radius: 6px
+    font-size: 14px
+    cursor: pointer
+    transition: background-color 0.2s ease, transform 0.2s ease
+
+    &:hover
+        background-color: #bbb
+        transform: scale(1.05)
+
+    &:active
+        transform: scale(0.95)
