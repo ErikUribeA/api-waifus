@@ -4,7 +4,11 @@
             <div class="profile-artist">
                 <p> Made by: {{ waifus?.attribution?.artist?.username ? waifus?.attribution?.artist?.username :
                     'Unknown' }} </p>
-                <p> Profile: {{waifus?.attribution?.artist?.profile ? waifus?.attribution?.artist?.profile : 'Unknown'  }} </p>
+                <p> Profile:
+                    <a (click)="openLink(waifus?.attribution?.artist?.profile)" >
+                        {{waifus?.attribution?.artist?.profile ? waifus?.attribution?.artist?.profile : 'Unknown' }}
+                    </a>
+                </p>
             </div>
             <img [src]="waifus?.image?.compressed?.url ?? 'images/saber.jpeg'"
                 [alt]="waifus?.attribution?.artist?.username ?? 'Imagen por defecto'">
@@ -32,6 +36,6 @@
     </div>
 
     <ng-template #noData>
-        <p>No hay imágenes disponibles</p>
+        <img src="/images/saber.jpeg" alt="">
     </ng-template>
 </main>

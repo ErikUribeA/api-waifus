@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ApiResponse } from './interfaces/api-response';
 import { Tags } from './interfaces/tags';
+import Swal from 'sweetalert2'
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +36,21 @@ export class WaifusService {
 
       return await response.json();
     } catch (error) {
-      alert('The tag is not avalible try another');
+      Swal.fire({
+        title: "Error",
+        text: "This tag is not available",
+        imageUrl: "/images/nope-cute.gif",
+        imageWidth: 400,
+        imageHeight: 250,
+        imageAlt: "Custom image",
+        background: "#222", 
+        color: "#fff", 
+        confirmButtonText: "Try Again",
+        customClass: {
+          popup: "custom-popup", // Aplica estilos personalizados
+          confirmButton: "custom-button"
+        },
+      });
       return null; // Retorna `null` en caso de error
     }
   }

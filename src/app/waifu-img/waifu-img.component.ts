@@ -53,4 +53,8 @@ export class WaifuImgComponent implements OnInit {
   hideTooltip() {
     this.tooltipVisible = false;
   }
+
+  openLink(url: string | undefined) {
+    window.open(url, '_blank');
+  }
 }

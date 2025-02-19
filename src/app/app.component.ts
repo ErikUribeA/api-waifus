@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   tags: Tags | null = null;
   selectedValue: string | null = null
   
-
   constructor(private waifusService: WaifusService) { }
 
   ngOnInit() {
